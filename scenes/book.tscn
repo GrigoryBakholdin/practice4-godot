@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://btn350dcbvidj"]
+
+[ext_resource type="PackedScene" uid="uid://cimw81845jwic" path="res://resources/book/medieval_open_book_2.glb" id="1_3wpgy"]
+[ext_resource type="Script" uid="uid://c6ba7yv1lmcxl" path="res://scripts/Book.cs" id="2_8uccb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3vbsa"]
+size = Vector3(1.8835449, 1.2632446, 0.3225708)
+
+[node name="Book" type="StaticBody3D" unique_id=440435558]
+script = ExtResource("2_8uccb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=241118497]
+transform = Transform3D(0.58294994, 0, 0, 0, -2.2128976e-08, 1, 0, -0.50625193, -4.371139e-08, -0.011211243, -0.013946533, -0.008574517)
+shape = SubResource("BoxShape3D_3vbsa")
+
+[node name="Sketchfab_Scene" parent="." unique_id=156509512 instance=ExtResource("1_3wpgy")]
+transform = Transform3D(0.58294994, 0, 0, 0, -2.2128976e-08, 1, 0, -0.50625193, -4.371139e-08, 0, 0, 0)
+
+[node name="CanvasLayer" type="Node" parent="." unique_id=784723772]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=719871402]
+visible = false
+offset_left = 216.0
+offset_top = 226.0
+offset_right = 920.0
+offset_bottom = 312.0

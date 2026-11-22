@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://3py41yo5r2kj"]
+
+[ext_resource type="PackedScene" uid="uid://dwm6ryffsljb8" path="res://resources/note/Note.glb" id="1_ku001"]
+[ext_resource type="Script" uid="uid://clha82bcp75go" path="res://scripts/Note.cs" id="1_tqwf5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3vbsa"]
+size = Vector3(1, 2.7435913, 1.8433838)
+
+[node name="Static Body" type="StaticBody3D" unique_id=894538431]
+script = ExtResource("1_tqwf5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1402093563]
+transform = Transform3D(0.117460415, 0, 0, 0, 0.17360039, 0, 0, 0, 0.23442961, 0, 0.01720932, 0.048709642)
+shape = SubResource("BoxShape3D_3vbsa")
+
+[node name="Sketchfab_Scene" parent="." unique_id=903866029 instance=ExtResource("1_ku001")]
+transform = Transform3D(0.117460415, 0, 0, 0, 0.17360039, 0, 0, 0, 0.23442961, 0, 0.012118073, 0.030208815)
+
+[node name="CanvasLayer" type="Node" parent="." unique_id=2143323774]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1511274470]
+visible = false
+offset_left = 390.0
+offset_top = 206.0
+offset_right = 712.0
+offset_bottom = 247.0
